@@ -1,8 +1,106 @@
-# C# LINQ
+# C# Lambda表达式和LINQ
 
 ## 介绍
 
-LINQ（Language Integrated Query，语言集成查询）是C#中一项强大的特性，它允许我们使用统一的语法对各种数据源（如集合、XML、数据库等）进行查询和操作。LINQ将查询功能直接集成到C#语言中，使开发人员能够使用类似SQL的语法编写强类型查询，从而提高代码的可读性和可维护性。本教程将详细介绍C#中LINQ的概念、语法和使用方法。
+Lambda表达式和LINQ（Language Integrated Query，语言集成查询）是C#中两项强大的特性，它们通常一起使用，能够大大提高代码的简洁性和可读性。Lambda表达式提供了一种简洁的方式来创建匿名函数，而LINQ则允许我们使用统一的语法对各种数据源进行查询和操作。本教程将详细介绍C#中Lambda表达式和LINQ的概念、语法和使用方法。
+
+## Lambda表达式
+
+### 什么是Lambda表达式？
+
+Lambda表达式是一种匿名函数，它允许我们以简洁的方式编写内联函数。Lambda表达式在LINQ查询、事件处理和异步编程等场景中特别有用。
+
+### Lambda表达式的语法
+
+Lambda表达式的基本语法如下：
+
+```csharp
+(parameters) => expression_or_statement_block
+```
+
+其中：
+- `parameters`：输入参数（可以是零个或多个）
+- `=>`：Lambda运算符（读作"goes to"）
+- `expression_or_statement_block`：表达式或语句块
+
+### Lambda表达式示例
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        // 无参数的Lambda表达式
+        Action sayHello = () => Console.WriteLine("Hello, World!");
+        sayHello();  // 输出：Hello, World!
+        
+        // 带一个参数的Lambda表达式
+        Action<string> greet = name => Console.WriteLine($"Hello, {name}!");
+        greet("Alice");  // 输出：Hello, Alice!
+        
+        // 带多个参数的Lambda表达式
+        Func<int, int, int> add = (x, y) => x + y;
+        Console.WriteLine(add(5, 3));  // 输出：8
+        
+        // 带语句块的Lambda表达式
+        Func<int, int> factorial = n =>
+        {
+            int result = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                result *= i;
+            }
+            return result;
+        };
+        Console.WriteLine(factorial(5));  // 输出：120
+    }
+}
+```
+
+### Lambda表达式的类型
+
+Lambda表达式可以转换为以下类型：
+
+1. **委托类型**：如`Action`、`Func`等
+2. **表达式树**：`Expression<TDelegate>`
+
+```csharp
+// 转换为委托类型
+Func<int, bool> isEven = x => x % 2 == 0;
+
+// 转换为表达式树
+Expression<Func<int, bool>> isEvenExpr = x => x % 2 == 0;
+```
+
+### Lambda表达式的捕获变量
+
+Lambda表达式可以访问定义它的方法中的局部变量和参数（称为捕获变量）：
+
+```csharp
+public void ProcessData(int threshold)
+{
+    int factor = 10;
+    
+    // Lambda表达式捕获了threshold和factor变量
+    Func<int, bool> filter = x => x * factor > threshold;
+    
+    var numbers = new[] { 1, 5, 10, 15, 20 };
+    var result = numbers.Where(filter);
+    
+    foreach (var num in result)
+    {
+        Console.WriteLine(num);
+    }
+}
+```
+
+## LINQ（语言集成查询）
+
+LINQ（Language Integrated Query，语言集成查询）是C#中一项强大的特性，它允许我们使用统一的语法对各种数据源（如集合、XML、数据库等）进行查询和操作。LINQ将查询功能直接集成到C#语言中，使开发人员能够使用类似SQL的语法编写强类型查询，从而提高代码的可读性和可维护性。
 
 ## LINQ的基本概念
 
@@ -561,4 +659,4 @@ class Program
 
 ## 下一步学习
 
-掌握了LINQ后，你可以继续学习[异步编程](04_异步编程.md)，了解如何使用C#的异步特性编写高效的非阻塞代码。
+恭喜你完成了Lambda表达式和LINQ的学习！接下来，你可以继续学习[高级C#特性/04_异步编程.md](04_异步编程.md)，了解C#中的异步编程模型。

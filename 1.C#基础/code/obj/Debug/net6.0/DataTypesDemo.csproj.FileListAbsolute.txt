@@ -1,0 +1,15 @@
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/bin/Debug/net6.0/DataTypesDemo
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/bin/Debug/net6.0/DataTypesDemo.deps.json
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/bin/Debug/net6.0/DataTypesDemo.runtimeconfig.json
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/bin/Debug/net6.0/DataTypesDemo.dll
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/bin/Debug/net6.0/DataTypesDemo.pdb
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/obj/Debug/net6.0/DataTypesDemo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/obj/Debug/net6.0/DataTypesDemo.AssemblyInfoInputs.cache
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/obj/Debug/net6.0/DataTypesDemo.AssemblyInfo.cs
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/obj/Debug/net6.0/DataTypesDemo.csproj.CoreCompileInputs.cache
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/obj/Debug/net6.0/DataTypesDemo.sourcelink.json
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/obj/Debug/net6.0/DataTypesDemo.dll
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/obj/Debug/net6.0/refint/DataTypesDemo.dll
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/obj/Debug/net6.0/DataTypesDemo.pdb
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/obj/Debug/net6.0/DataTypesDemo.genruntimeconfig.cache
+/Users/mytg/Documents/code/C#Tutorial/1.C#基础/code/obj/Debug/net6.0/ref/DataTypesDemo.dll
